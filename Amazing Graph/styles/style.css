@@ -20,12 +20,16 @@ header nav {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 35px;
+    padding: 35px 220px;
 }
 
 header nav .nav-brand-container h1#brand {
     color: #D2872C;
     font-size: 28px;
+}
+
+header nav .nav-menu i#mobile-nav {
+    display: none;
 }
 
 header nav .nav-menu ul {
@@ -46,8 +50,11 @@ header nav .nav-menu ul li a {
 header .presentation {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     /* flex-direction: column-reverse; */
+    position: relative;
+    margin: auto 270px;
+    width: 65%;
 }
 
 header .presentation .title-container {
@@ -59,7 +66,7 @@ header .presentation .title-container {
 }
 
 header .presentation .title-container h1#presentation-title {
-    font-size: 76px;
+    font-size: 74px;
     margin-bottom: 0;
     max-width: 700px;
     width: 100%;
@@ -67,21 +74,25 @@ header .presentation .title-container h1#presentation-title {
 
 header .presentation .title-container h2#presentation-subtitle {
     font-weight: 400;
-    font-size: 26px;
+    font-size: 30px;
+    max-width: 460px;
+    display: flex;
+    align-self: flex-start;
 }
 
 header .presentation .title-container a#header-btn {
     height: 65px;
-    width: 270px;
+    width: 280px;
     padding: 25px 20px 20px;
     background-color: #D2872C;
     color: white;
     border-radius: 12px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: flex-start;
     font-size: 24px;
     font-weight: bold;
+    margin-top: 25px;
 }
 
 header .presentation .presentation-img {}
@@ -89,13 +100,76 @@ header .presentation .presentation-img {}
 header .presentation .presentation-img img {
     height: 400px;
     width: 600px;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    top: 80px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    header nav {
+        top: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 15px 45px;
+    }
+    header nav .nav-menu ul {
+        display: none;
+    }
+    header nav .nav-menu i#mobile-nav {
+        display: flex;
+        padding: 30px 5px;
+        font-size: 26px;
+        color: #766F68;
+    }
     header .presentation {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
+        /* flex-direction: column-reverse; */
+        position: static;
+        width: 100%;
+        margin: auto;
+        padding: 50px;
+    }
+    header .presentation .title-container h1#presentation-title {
+        font-size: 34px;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    header .presentation .title-container h2#presentation-subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    header .presentation .presentation-img img {
+        height: auto;
+        position: static;
+        width: 100%;
+    }
+    header .presentation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    header .presentation .title-container a#header-btn {
+        height: 55px;
+        width: 240px;
+        padding: 15px 20px 20px;
+        background-color: #D2872C;
+        color: white;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
     }
 }
