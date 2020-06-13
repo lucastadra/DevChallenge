@@ -1,0 +1,206 @@
+@media (max-width: 768px) {
+    .section {
+        padding: 0 40px;
+        width: 100%;
+        margin: 0;
+    }
+    .brand {
+        margin: 0;
+        font-size: 50px;
+        color: var(--red);
+        font-style: italic;
+    }
+    header nav {
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    header nav .nav-brand-container {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    header nav .nav-menu {
+        width: 100%;
+    }
+    header nav .nav-menu ul {
+        justify-content: center;
+        width: 100%;
+        padding: 0px 50px;
+    }
+    header nav .nav-menu ul li {
+        margin-left: 40px;
+    }
+    header nav .nav-menu ul li a {
+        font-size: 20px;
+    }
+    header nav .nav-menu ul li a#btn-login {
+        display: none;
+    }
+    /* Presentation Section */
+    header .presentation {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+    header .presentation .presentation-img {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    header .presentation .presentation-img img {
+        height: auto;
+        width: 100%;
+    }
+    header .presentation .presentation-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    header .presentation .presentation-text h1 {
+        margin: 0;
+        color: var(--red);
+        font-size: 44px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    header .presentation .presentation-text h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+    }
+    header .presentation .presentation-text a#btn-quote {
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: var(--red);
+        padding: 12px 50px;
+        border-radius: 12px;
+        align-self: center;
+        text-align: center;
+    }
+    /* Content / info section */
+    main .content .info-section {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    main .content .info-section .info-section-img {
+        width: 100%;
+        margin-top: 50px;
+    }
+    main .content .info-section .info-section-img img {
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+    main .content .info-section ul {
+        padding-top: 25px;
+        width: 100%;
+    }
+    main .content .info-section ul li {
+        font-size: 19px;
+    }
+    /*contact section*/
+    main .content .contact-section {
+        margin-bottom: 100px;
+    }
+    main .content .contact-section form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 100%;
+        align-content: center;
+        justify-content: center;
+    }
+    main .content .contact-section form label {
+        font-size: 19px;
+        font-weight: 700;
+    }
+    main .content .contact-section form input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    main .content .contact-section form a#btn-call {
+        font-size: 20px;
+        text-align: center;
+    }
+    /* Feedback section */
+    main .content .feedback-section {
+        display: flex;
+        flex-direction: column;
+    }
+    main .content .feedback-section .feedback {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        max-height: auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    main .content .feedback-section .feedback .customer-photo-container {
+        margin: 0px;
+    }
+    main .content .feedback-section .feedback .customer-info {
+        margin-top: 15px;
+    }
+    /*footer */
+    footer {
+        background-color: rgba(0, 0, 0, 0.973);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    footer .footer-section {
+        width: 100%;
+        margin: 0;
+    }
+    footer .footer-section .footer-section-title {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    footer #brand-footer h2.brand {
+        color: white;
+        margin: 0;
+        text-align: center;
+    }
+    footer p {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 70%;
+    }
+    footer #brand-footer p {
+        text-align: center;
+        margin-bottom: 15px;
+        max-width: 100%;
+        font-size: 20px;
+    }
+    footer #contact ul li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    footer #contact ul li a {
+        font-weight: 400;
+    }
+    footer #socialmedia a {
+        font-weight: 400;
+        margin: 0px 25px 0 0;
+    }
+}

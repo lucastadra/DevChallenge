@@ -174,26 +174,27 @@ main .content .info-section .info-section-img img {
     margin: 0;
 }
 
-main .content .info-section .contact-section {
+main .content .contact-section {
     width: 100%;
     margin-top: 10px;
 }
 
-main .content .info-section .contact-section form {
+main .content .contact-section form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 70%;
 }
 
-main .content .info-section .contact-section form label {
+main .content .contact-section form label {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 15px;
     width: 100%;
+    margin-top: 25px;
 }
 
-main .content .info-section .contact-section form input {
+main .content .contact-section form input {
     width: 35%;
     margin-right: 20px;
     border-radius: 12px;
@@ -207,7 +208,7 @@ main .content .info-section .contact-section form input {
     margin-bottom: 5px;
 }
 
-main .content .info-section .contact-section form a#btn-call {
+main .content .contact-section form a#btn-call {
     color: white;
     font-size: 24px;
     font-weight: 500;
@@ -234,18 +235,15 @@ main .content .feedback-section .feedback {
     max-height: auto;
     justify-content: center;
     align-items: center;
-}
-
-main .content .feedback-section .feedback:first-of-type {
-    margin-right: 40px;
-}
-
-main .content .feedback-section .feedback {
     width: 50%;
     width: 550px;
     background-color: var(--light-gray);
     padding: 50px;
     border-radius: 12px;
+}
+
+main .content .feedback-section .feedback:first-of-type {
+    margin-right: 40px;
 }
 
 main .content .feedback-section .feedback .customer-photo-container {
@@ -316,6 +314,7 @@ footer #brand-footer h2.brand {
 footer p {
     font-size: 24px;
     margin: 0;
+    font-weight: 300;
 }
 
 footer #contact ul {
@@ -326,15 +325,18 @@ footer #contact ul {
 footer #contact ul li {
     margin-bottom: 25px;
     font-size: 24px;
+    font-weight: 300;
 }
 
 footer #contact ul li a {
     color: white;
     text-decoration: underline;
+    font-weight: 300;
 }
 
 footer #socialmedia a {
     font-size: 46px;
+    font-weight: 300;
     margin: 15px;
     color: var(--red);
 }
