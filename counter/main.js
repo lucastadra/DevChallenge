@@ -37,6 +37,7 @@ btn.onclick = () => {
             }
 
             var days = Math.round(((((inputDate.getTime() - actualDate.getTime()) / 1000) / 60) / 60) / 24);
+
             var hours = (23 - actualDate.getHours());
             var minutes = (60 - actualDate.getMinutes());
             var seconds = (60 - actualDate.getSeconds());

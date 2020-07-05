@@ -9,6 +9,13 @@
     -webkit-font-smoothing: antialiased;
 }
 
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
 .title {
     color: #21eb00;
     font-size: 50px;
@@ -22,6 +29,7 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    width: 30%;
 }
 
 .input-container .title {
@@ -37,9 +45,10 @@
 
 .input-container #dateInput {
     border-radius: 30px;
-    padding: 20px 55px;
+    padding: 20px 30px;
     border-style: none;
     background-color: rgb(29, 29, 29);
+    width: 100%;
     font-size: 22px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.651);
@@ -49,12 +58,13 @@
 
 .input-container #select {
     background-color: #21eb00;
-    padding: 15px 60px;
+    padding: 15px 0px;
     color: black;
     text-decoration: none;
     font-weight: bold;
     font-size: 28px;
     cursor: pointer;
+    width: 100%;
     border-radius: 25px;
     border: none;
 }
@@ -93,6 +103,7 @@ header {
     align-content: center;
     padding: 15px 60px;
     top: 0;
+    width: 100%;
 }
 
 #restart {
@@ -132,6 +143,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
 }
 
 .modal-content #display-container span {
@@ -167,4 +179,32 @@ header {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .input-container {
+        width: 100%;
+        padding: 0 30px;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 55px 60px;
+    }
+    .modal-content #display-container {
+        width: 100%;
+    }
+    .modal-content #display-container span {
+        margin: 15px 10px;
+    }
+    .modal-content #display-container span p.counter {
+        font-size: 38px;
+        width: 100%;
+    }
+    .modal-content #display-container span p.unit {
+        color: #21eb00;
+        font-size: 20px;
+        font-weight: 300;
+        width: 100%;
+    }
 }
