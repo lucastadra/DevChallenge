@@ -23,12 +23,12 @@ window.onclick = event => {
 
 btn.onclick = () => {
     modal.style.display = "block";
+    var inputDate = new Date(input.value); //Data do input
+    inputDate.setHours(24, 0, 0, 0); //Reseta horas
+
+    var actualDate = new Date(); //Data atual
     var displayTime = setInterval(() => {
         try {
-            var inputDate = new Date(input.value); //Data do input
-            inputDate.setHours(24, 0, 0, 0); //Reseta horas
-
-            var actualDate = new Date(); //Data atual
 
             console.log(inputDate);
             if ((inputDate.getTime() < actualDate.getTime())) { //Exception
@@ -42,20 +42,17 @@ btn.onclick = () => {
             var minutes = (60 - actualDate.getMinutes());
             var seconds = (60 - actualDate.getSeconds());
 
-            //console.log(`${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos`);
-            // errDisplay.innerHTML = (`${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos`);
-
             daysDisplay.innerHTML = days;
             hoursDisplay.innerHTML = hours;
             minutesDisplay.innerHTML = minutes;
             secondsDisplay.innerHTML = seconds;
         } catch (error) {
-            //console.log(err);
-            errDisplay.innerHTML = "Insira uma data correta. A data deve ser maior que a atual!";
+            errDisplay.innerHTML = "Insira uma data correta";
             clearInterval(displayTime);
             return;
         }
     }, 1000);
+    input.value = "";
 };
 
 span.onclick = function() {
