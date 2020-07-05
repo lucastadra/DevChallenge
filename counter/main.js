@@ -23,7 +23,9 @@ btn.onclick = () => {
     modal.style.display = "block";
     var inputDate = new Date(input.value); //Data do input
     inputDate.setHours(24, 0, 0, 0); //Reseta horas
+
     var displayTime = setInterval(() => {
+
         try {
 
             var actualDate = new Date(); //Data atual
@@ -39,9 +41,6 @@ btn.onclick = () => {
             var minutes = (60 - actualDate.getMinutes());
             var seconds = (60 - actualDate.getSeconds());
 
-            //console.log(`${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos`);
-            // errDisplay.innerHTML = (`${days} dias ${hours} horas ${minutes} minutos ${seconds} segundos`);
-
             daysDisplay.innerHTML = days;
             hoursDisplay.innerHTML = hours;
             minutesDisplay.innerHTML = minutes;
@@ -53,6 +52,7 @@ btn.onclick = () => {
             return;
         }
     }, 1000);
+
     input.value = "";
     var span = document.querySelector("#close");
 
