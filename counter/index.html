@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="input-container">
+        <h1 class="title">Contador</h1>
+        <p>Informe uma data</p>
+        <input type="date" id="dateInput" required>
+        <button type="submit" id="select">Iniciar contagem</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <header>
+                <h1 class="title">Contador</h1>
+                <span class="close" id="close"><a id="restart">Reiniciar</a></span>
+            </header>
+            <!--<span class="close">&times;</span>-->
+            <h2>Faltam</h2>
+            <!--Conteúdo do relógio-->
+            <div id="display-container">
+                <span id="day">
+                    <p id="dias"class="counter"></p>
+                    <p class="unit">Dias</p>
+                </span>
+                <span id="hours">
+                    <p id="horas" class="counter"></p>
+                    <p class="unit">Horas</p>
+                </span>
+                <span id="minutes">
+                    <p id="minutos" class="counter"></p>
+                    <p class="unit">Minutos</p>
+                </span>
+                <span id="seconds">
+                    <p id="segundos" class="counter"></p>
+                    <p class="unit">Segundos</p>
+                </span>
+            </div>
+            <span id="errDisplay"></span>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="./modal.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+
+</html>
