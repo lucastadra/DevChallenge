@@ -11,8 +11,6 @@ var secondsDisplay = document.querySelector('#segundos');
 
 var modal = document.querySelector("#myModal");
 
-var span = document.querySelector("#close");
-
 window.onclick = event => {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -29,15 +27,12 @@ btn.onclick = () => {
     var actualDate = new Date(); //Data atual
     var displayTime = setInterval(() => {
         try {
-
-            console.log(inputDate);
             if ((inputDate.getTime() < actualDate.getTime())) { //Exception
                 container.style.display = 'none';
                 throw "Invalid Date";
             }
 
             var days = Math.round(((((inputDate.getTime() - actualDate.getTime()) / 1000) / 60) / 60) / 24);
-
             var hours = (23 - actualDate.getHours());
             var minutes = (60 - actualDate.getMinutes());
             var seconds = (60 - actualDate.getSeconds());
@@ -54,6 +49,8 @@ btn.onclick = () => {
     }, 1000);
     input.value = "";
 };
+
+var span = document.querySelector("#close");
 
 span.onclick = function() {
     modal.style.display = "none";
