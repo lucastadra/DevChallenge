@@ -52,15 +52,21 @@ server.post('/obras', (req, res) => {
 server.put('/obras/:id', checaObra, (req, res) => {
   const { id } = req.params;
   const { titulo, editora, foto, autores } = req.body;
-  const obra = obras.find((obra) => obra.id == id);
+  const obraIndex = obras.findIndex((obra) => obra.id == id);
 
-  obra.titulo = titulo;
-  obra.editora = editora;
-  obra.foto = foto;
-  obra.autores.pop(autores);
-  obra.autores.push(autores);
+  if (obraIndex < 0) {
+    return response.status(400).json({ error: 'Não encontrado' });
+  }
 
-  return res.json(obra);
+  obras[obraIndex] = {
+    id,
+    titulo: titulo ? titulo : obras[obraIndex].titulo,
+    editora: editora ? editora : obras[obraIndex].editora,
+    foto: foto ? foto : obras[obraIndex].foto,
+    autores: autores ? autores : obras[obraIndex].autores,
+  };
+
+  return res.json(obras[obraIndex]);
 });
 
 server.delete('/obras/:id', checaObra, (req, res) => {
