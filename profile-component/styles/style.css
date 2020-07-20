@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #B7B7B7;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0C0B0B;
+    height: 100%;
+}
+
+.content {
+    background-color: #0F0E0E;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 320px;
+    padding: 25px 40px;
+    border-radius: 8px;
+}
+
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.userProfile .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.userProfile .user .userImg div {
+    padding: 40px;
+    border-radius: 50%;
+    background-color: #2b2929;
+}
+
+.userProfile .user .userName {
+    margin-left: 20px;
+}
+
+.userProfile #btnEdit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #2b2929
+}
+
+.userProfile #btnEdit p {
+    margin-left: 5px;
+}
+
+.userInfo .box {
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.userInfo .box h2 {
+    font-size: 32px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.userProjects {
+    background-color: #046313;
+}
+
+.userStars {
+    background-color: #044A7D;
+}
+
+.userFollowers {
+    background-color: #725200;
+}
